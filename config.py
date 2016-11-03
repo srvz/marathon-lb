@@ -30,7 +30,7 @@ global
   log /dev/log local1 notice
   spread-checks 5
   max-spread-checks 15000
-  maxconn 50000
+  maxconn 100000
   tune.ssl.default-dh-param 2048
   ssl-default-bind-ciphers ECDHE-ECDSA-CHACHA20-POLY1305:\
 ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:\
@@ -67,8 +67,8 @@ defaults
   load-server-state-from-file global
   log               global
   retries                   3
-  backlog               10000
-  maxconn               10000
+  backlog               100000
+  maxconn               100000
   timeout connect          3s
   timeout client          30s
   timeout server          30s
